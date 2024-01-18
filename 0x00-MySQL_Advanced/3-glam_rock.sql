@@ -1,5 +1,14 @@
---  lists all bands with Glam rock as their main style, ranked by their longevity
-SELECT band_name AS band_name, IFNULL(split, 2020) - IFNULL(formed, 0) AS lifespan
-FROM metal_bands
-WHERE style LIKE '%Glam rock%'
-ORDER BY lifespan DESC;
+-- This SQL script creates a trigger named 'reduce_quantity' that runs after an insert on the 'orders' table.
+-- The trigger reduces the quantity of an item in the 'items' table by the number of items ordered in the new 'orders' row.
+
+DROP TRIGGER IF EXISTS reduce_quantity;
+DELIMITER $$
+CREATE TRIGGER reduce_quantity
+AFTER INSERT ON orders
+FOR EACH ROW
+BEGIN
+    UPDATE items
+        SET quantity = quantity - NEW.number
+        WHERE name = NEW.item_name;
+END $$
+DELIMITER ;
