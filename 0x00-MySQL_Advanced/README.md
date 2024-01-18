@@ -39,6 +39,9 @@
 `11-need_meeting.sql`
 > 11. No table for a meeting
 ---
-``
-> 
+`100-average_weighted_score.sql`
+> 12. Average weighted score
+---
+`101-average_weighted_score.sql`
+> 13. Average weighted score for all!
 ---
