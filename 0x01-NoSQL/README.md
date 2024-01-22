@@ -42,12 +42,12 @@
 `12-log_stats.py`
 > 12. Log stats
 ---
-``
-> 
+`100-find`
+> 13. Regex filter
 ---
-``
-> 
+`101-students.py`
+> 14. Top students
 ---
-``
-> 
+`102-log_stats.py`
+> 15. Log stats - new version
 ---
