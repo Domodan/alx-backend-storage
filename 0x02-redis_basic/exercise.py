@@ -80,7 +80,7 @@ class Cache:
 
     @count_calls
     @call_history
-    def store (self, data: Union[str, bytes, int, float]) -> str:
+    def store(self, data: Union[str, bytes, int, float]) -> str:
         """
             Store data in the cache.
         """
@@ -88,7 +88,7 @@ class Cache:
         self._redis.set(randomKey, data)
         return randomKey
 
-    def get (self, key: str,
+    def get(self, key: str,
             fn: Optional[Callable] = None) -> Union[str, bytes, int, float]:
         """
             Get data from the cache.
