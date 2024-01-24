@@ -98,14 +98,14 @@ class Cache:
             value = fn(value)
         return value
 
-    def get_(self, key: str) -> str:
+    def get_str(self, key: str) -> str:
         """
             Get a string from the cache.
         """
         value = self._redis.get(key)
         return value.decode('utf-8')
 
-    def get_(self, key: str) -> int:
+    def get_int(self, key: str) -> int:
         """
             Get an int from the cache.
         """
