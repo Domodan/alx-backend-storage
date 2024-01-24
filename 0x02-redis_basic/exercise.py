@@ -10,7 +10,7 @@ from functools import wraps
 """
 
 
-#def count_calls(method: Callable) -> Callable:
+def count_calls(method: Callable) -> Callable:
     """
         Counts the number of times a method is called.
     """
