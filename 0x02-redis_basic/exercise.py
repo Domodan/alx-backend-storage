@@ -88,7 +88,7 @@ class Cache:
         self._redis.set(randomKey, data)
         return randomKey
 
-    def (self, key: str,
+    def get (self, key: str,
             fn: Optional[Callable] = None) -> Union[str, bytes, int, float]:
         """
             Get data from the cache.
